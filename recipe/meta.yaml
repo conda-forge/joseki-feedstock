@@ -1,5 +1,5 @@
 {% set name = "joseki" %}
-{% set version = "2.6.1" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/joseki-{{ version }}.tar.gz
-  sha256: 1da05fddb7df3b7b3209970857128f14c4024a5437fb6c55973cdfd8ccf38c39
+  sha256: 79fec55f9fb14255b0a9050b4b9b8d93e9a018ed55f460fec6d9af1cdeeb81f0
 
 build:
   entry_points:
     - joseki = joseki.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
